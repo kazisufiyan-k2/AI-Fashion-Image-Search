@@ -1,19 +1,3 @@
-"""
-search.py
----------
-Runtime search module ONLY.
-
-This file does NOT generate embeddings and does NOT scan the dataset folder.
-It simply:
-  1. Loads the CLIP model (open_clip, CPU) once
-  2. Loads the precomputed FAISS index + image_paths.pkl once
-  3. Encodes a single uploaded query image
-  4. Returns the Top-K most similar images
-
-Keeping this file "dumb and fast" is what makes deployment startup quick.
-All the heavy lifting (embedding 2000+ images) happens offline in embed.py.
-"""
-
 import pickle
 from typing import List, Tuple
 
