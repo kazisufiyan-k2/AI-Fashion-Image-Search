@@ -1,13 +1,3 @@
----
-title: AI Fashion Image Search
-emoji: 👗
-colorFrom: pink
-colorTo: purple
-sdk: docker
-app_port: 7860
-pinned: false
----
-
 # AI Fashion Image Search
 
 CLIP (open_clip, ViT-B/32) + FAISS powered Top-5 visual similarity search over
