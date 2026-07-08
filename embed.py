@@ -1,20 +1,3 @@
-"""
-embed.py — OFFLINE embedding generation.
-
-Run this ONCE on your machine (you already have images + styles.csv ready):
-
-    python embed.py
-
-It creates:
-  embeddings/embeddings.npy    -> (N, 512) float32, L2-normalized CLIP vectors
-  embeddings/faiss.index       -> FAISS IndexFlatIP built from those vectors
-  embeddings/image_paths.pkl   -> list[str], row-aligned image file paths
-
-IMPORTANT: This script must NOT run automatically when the app deploys.
-Deploy only the *output* files above (they're small). Re-embedding images
-on every container boot is what caused the old 30-hour hang on Render.
-"""
-
 import argparse
 import os
 import pickle
